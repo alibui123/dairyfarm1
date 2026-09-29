@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local QA / design tooling artifacts
+.impeccable/screenshots/
+.impeccable/sketches/

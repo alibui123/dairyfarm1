@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Al Shukr Dairy Farm — Homepage
 
-## Getting Started
+Premium customer-facing homepage for **Al Shukr Dairy Farm** — *Purity Promised*.
 
-First, run the development server:
+## Stack
+
+- Next.js (App Router) + TypeScript
+- Tailwind CSS v4
+- GSAP + ScrollTrigger + `@gsap/react`
+- Framer Motion
+- Lenis smooth scroll
+
+## Develop
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+  app/           # layout, page, globals
+  components/    # homepage sections
+  lib/           # content.ts, images.ts
+public/images/   # brand + farm photography (replaceable)
+```
 
-## Learn More
+## Content & contact
 
-To learn more about Next.js, take a look at the following resources:
+Edit copy in `src/lib/content.ts`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Update WhatsApp / email / location placeholders in the `brand` object before launch.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Imagery
 
-## Deploy on Vercel
+Temporary high-quality farm photography lives in `public/images/`.  
+Map is centralized in `src/lib/images.ts` — swap files or paths there.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Official logo: `public/images/brand/logo.jpg`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Design
+
+See `PRODUCT.md`, `DESIGN.md`, and `tokens.css`.
